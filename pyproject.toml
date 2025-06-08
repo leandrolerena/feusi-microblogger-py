@@ -15,8 +15,25 @@ dependencies = [
 [tool.poetry]
 package-mode=false
 
+[tool.pylint]
+max-line-length = 120
+disable = [
+    "missing-docstring",
+    "unused-argument",
+    "line-too-long",
+    "fixme",
+    "protected-access",
+    "too-few-public-methods",
+    "redefined-outer-name",
+    "broad-exception-caught",
+    "too-many-instance-attributes",
+    "arguments-renamed"
+]
+
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.7"
+pytest = "^8.4.0"
+black = "^25.1.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
