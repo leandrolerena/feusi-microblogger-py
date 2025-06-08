@@ -7,11 +7,10 @@ def show_add_new_post():
     st.subheader("Add a new post")
 
     # Get current user name from session state
-    user_name = st.session_state.user_name if "user_name" in st.session_state else ""
+    user = st.session_state.user if "user" in st.session_state else None
 
     new_post = st.text_input("Write a new post", key="new_post_input")
-    if st.button("Submit", key="submit_button"):
+    if st.button("Submit", key="add_post"):
         if new_post.strip():
             # Create post with content and user name
-            storage.add_post(Post(content=new_post.strip(), user_name=user_name))
-            st.rerun()
+            storage.add_post(Post(content=new_post.strip(), user=user))
