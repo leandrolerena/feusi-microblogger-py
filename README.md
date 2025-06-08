@@ -5,6 +5,16 @@ It is built using Python and Streamlit, with an in-memory data store for simplic
 
 For students, it serves as a practical example of a web application which can be extended with more features like user authentication, message deletion, and more.
 
+
+## Install and run the project
+
+To install the project dependencies and run the application, follow these steps (make sure poetry is installed and in your PATH):
+
+```bash
+poetry install
+poetry run app
+```
+
 ## Run static code analysis (Pylint)
 
 To run Pylint on the project, use the following command:

@@ -67,7 +67,7 @@ This guide outlines key code conventions to follow for Python-based projects in 
 * Use `pytest` or `unittest`
 * Write tests for key logic and edge cases
 * Name test files like `test_<module>.py`
-* Place tests in a `tests/` directory
+* Place tests in a `test/` directory
 
 ---
 
