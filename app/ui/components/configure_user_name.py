@@ -1,6 +1,6 @@
 import streamlit as st
 
-from model.user import User
+from app.model.user import User
 
 
 def show_configure_user_name():

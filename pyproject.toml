@@ -30,6 +30,10 @@ disable = [
     "arguments-renamed"
 ]
 
+[tool.pytest.ini_options]
+testpaths = ["app", "test"]
+python_files = ["test_*.py"]
+
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.7"
 pytest = "^8.4.0"
