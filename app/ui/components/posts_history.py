@@ -1,6 +1,7 @@
 import streamlit as st
 from app.persistence.storage import storage
 
+
 def show_posts_history():
     all_posts = storage.get_posts()
     st.subheader("Posts")

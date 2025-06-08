@@ -1,11 +1,12 @@
 import streamlit as st
 
+
 def show_configure_user_name():
     st.subheader("User Configuration")
-    
-    if 'user_name' not in st.session_state:
+
+    if "user_name" not in st.session_state:
         st.session_state.user_name = ""
-    
+
     if st.session_state.user_name:
         st.write(f"Current user: **{st.session_state.user_name}**")
         if st.button("Change user name"):
