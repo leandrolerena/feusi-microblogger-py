@@ -5,9 +5,18 @@ from .user import User
 
 @dataclass
 class Post:
+    """
+    Post model representing a post in the application.
+    It contains the content of the post, the user who created it, and a timestamp.
+    """
     content: str
     user: User
     timestamp: datetime = datetime.now()
 
+    """
+    Returns a string representation of the Post object.
+    This method is called whenever a Post object is printed or converted to a string.
+    e.g. print(post) or str(post).
+    """
     def __str__(self):
         return f"{self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}: {self.content} (by {self.user})"
