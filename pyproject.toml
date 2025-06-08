@@ -1,5 +1,5 @@
 [project]
-name = "microblogger"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = [
@@ -11,6 +11,10 @@ dependencies = [
     "streamlit (>=1.45.1,<2.0.0)",
     "streamlit-autorefresh (>=1.0.1,<2.0.0)"
 ]
+
+
+[tool.poetry.scripts]
+app = 'app.main:main'
 
 [tool.poetry]
 package-mode=false
