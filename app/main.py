@@ -1,11 +1,16 @@
-import sys
-import streamlit.web.bootstrap
-app_path = "streamlit_app.py"
+"""
+This script is the entry point for the Streamlit application.
+It calls the Streamlit bootstrap function to run the app.
+"""
 
-if __name__ == '__main__':
+import streamlit.web.bootstrap
+
+APP_PATH = "streamlit_app.py"
+
+if __name__ == "__main__":
     streamlit.web.bootstrap.run(
-        app_path,
+        APP_PATH,
         False,  # Command-line args as a string, e.g. "--server.port 8502"
         [],
-        {}
+        {},
     )
