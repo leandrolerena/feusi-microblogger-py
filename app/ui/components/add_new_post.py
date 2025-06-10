@@ -11,6 +11,9 @@ def show_add_new_post():
 
     new_post = st.text_input("Write a new post", key="new_post_input")
     if st.button("Submit", key="add_post"):
-        if new_post.strip():
+        post = Post(content=new_post.strip(), user=user)
+        if post.is_valid():
             # Create post with content and user name
-            storage.add_post(Post(content=new_post.strip(), user=user))
+            storage.add_post(post)
+        else:
+            st.warning("Post content is not valid")
