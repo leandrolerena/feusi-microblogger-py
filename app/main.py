@@ -2,12 +2,15 @@
 This script is the entry point for the Streamlit application.
 It calls the Streamlit bootstrap function to run the app.
 """
-import inspect
-import app.streamlit_app
 
+import inspect
 import streamlit.web.bootstrap
 
+import app.streamlit_app
+
+
 file_path = inspect.getfile(app.streamlit_app)
+
 
 def main():
     streamlit.web.bootstrap.run(
@@ -16,6 +19,7 @@ def main():
         [],
         {},
     )
+
 
 if __name__ == "__main__":
     main()

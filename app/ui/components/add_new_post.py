@@ -1,6 +1,6 @@
 import streamlit as st
 from app.model.post import Post
-from app.persistence.storage import storage
+from app.persistence import storage
 
 
 def show_add_new_post():

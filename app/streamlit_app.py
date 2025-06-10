@@ -10,6 +10,7 @@ from app.ui.components.add_new_post import show_add_new_post
 from app.ui.components.posts_history import show_posts_history
 from app.ui.components.configure_user_name import show_configure_user_name
 
+
 def main():
     """Main function to run the Streamlit app."""
     # Creates and renders the title of the app
@@ -26,6 +27,7 @@ def main():
 
     # This makes sure the app refreshes every 2 seconds to show newly added posts
     st_autorefresh(interval=2000, limit=None, key="auto-refresh")
+
 
 if __name__ == "__main__":
     main()

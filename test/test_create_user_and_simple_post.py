@@ -1,13 +1,14 @@
 import inspect
 
 from streamlit.testing.v1 import AppTest
-from app.persistence.storage import storage
 import app.streamlit_app
+from app.persistence import storage
+
 
 def test_user_post_flow():
     """Test the complete flow of user entering name and adding a post."""
     # Clear any existing test data
-    storage.posts.clear()
+    storage.clear()
 
     # Create and run the Streamlit app test
     file_path = inspect.getfile(app.streamlit_app)

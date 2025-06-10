@@ -1,5 +1,6 @@
 import streamlit as st
-from app.persistence.storage import storage
+
+from app.persistence import storage
 
 
 def show_posts_history():
