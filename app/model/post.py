@@ -13,6 +13,7 @@ class Post:
     content: str
     user: User
     timestamp: datetime = datetime.now()
+    title: str = "Kein Titel"
 
     """
     Returns a string representation of the Post object.
@@ -21,7 +22,7 @@ class Post:
     """
 
     def __str__(self):
-        return f"{self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}: {self.content} (by {self.user})"
+        return f"{self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}: {self.title} {self.content} (by {self.user})"
 
     def is_valid(self) -> bool:
         """
@@ -30,4 +31,5 @@ class Post:
         """
         has_content = bool(self.content)
         has_user = bool(self.user)
-        return has_content and has_user
+        has_title = bool(self.title)
+        return has_content and has_user and has_title

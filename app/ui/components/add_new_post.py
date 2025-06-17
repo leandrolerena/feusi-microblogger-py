@@ -9,9 +9,10 @@ def show_add_new_post():
     # Get current user name from session state
     user = st.session_state.user if "user" in st.session_state else None
 
+    new_post_title = st.text_input("Title of a new post", key="new_post_title_input")
     new_post = st.text_input("Write a new post", key="new_post_input")
     if st.button("Submit", key="add_post"):
-        post = Post(content=new_post.strip(), user=user)
+        post = Post(content=new_post.strip(), user=user, title=new_post_title)
         if post.is_valid():
             # Create post with content and user name
             storage.add_post(post)
