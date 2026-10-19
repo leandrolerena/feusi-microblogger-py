@@ -11,11 +11,10 @@ class User:
 
     name: str
 
-    """
-    Returns a string representation of the User object.
-    This method is called whenever a User object is printed or converted to a string.
-    e.g. print(user) or str(user).
-    """
-
     def __str__(self):
+        """
+        Returns a string representation of the User object.
+        This method is called whenever a User object is printed or converted to a string.
+        e.g. print(user) or str(user).
+        """
         return self.name
