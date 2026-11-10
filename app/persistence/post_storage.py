@@ -2,6 +2,7 @@ from abc import abstractmethod
 
 from app.model.post import Post
 
+
 class PostStorage:
     @abstractmethod
     def add_post(self, post: Post):

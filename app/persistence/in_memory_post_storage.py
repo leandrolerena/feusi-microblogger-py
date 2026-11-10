@@ -7,6 +7,7 @@ class InMemoryPostStorage(PostStorage):
     """
     lass to manage posts in a thread-safe manner.
     """
+
     def __init__(self):
         self.posts: list[Post] = []
         self.posts_lock = threading.Lock()
