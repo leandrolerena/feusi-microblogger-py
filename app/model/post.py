@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from .user import User
 
@@ -12,15 +12,14 @@ class Post:
 
     content: str
     user: User
-    timestamp: datetime = datetime.now()
-
-    """
-    Returns a string representation of the Post object.
-    This method is called whenever a Post object is printed or converted to a string.
-    e.g. print(post) or str(post).
-    """
+    timestamp: datetime = field(default_factory=datetime.now)
 
     def __str__(self):
+        """
+        Returns a string representation of the Post object.
+        This method is called whenever a Post object is printed or converted to a string.
+        e.g. print(post) or str(post).
+        """
         return f"{self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}: {self.content} (by {self.user})"
 
     def is_valid(self) -> bool:

@@ -7,4 +7,4 @@ def show_posts_history():
     all_posts = storage.get_posts()
     st.subheader("Posts")
     for i, post in enumerate(all_posts):
-        st.write(f"{i}. - {str(post)}")
+        st.write(f"{i+1}. - {str(post)}")
